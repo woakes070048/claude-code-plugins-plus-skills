@@ -5239,6 +5239,259 @@
       }
     },
     {
+      "name": "databricks-pack",
+      "source": "./plugins/saas-packs/databricks-pack",
+      "description": "Complete Databricks integration skill pack with 24 skills covering Delta Lake, MLflow, notebooks, clusters, and data engineering workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "data-engineering",
+      "keywords": [
+        "databricks",
+        "delta-lake",
+        "mlflow",
+        "spark",
+        "notebooks",
+        "clusters",
+        "data-engineering",
+        "lakehouse"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "mistral-pack",
+      "source": "./plugins/saas-packs/mistral-pack",
+      "description": "Complete Mistral AI integration skill pack with 24 skills covering model inference, embeddings, fine-tuning, and production deployments. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "mistral",
+        "llm",
+        "inference",
+        "embeddings",
+        "fine-tuning",
+        "ai",
+        "machine-learning"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "langfuse-pack",
+      "source": "./plugins/saas-packs/langfuse-pack",
+      "description": "Complete Langfuse integration skill pack with 24 skills covering LLM observability, tracing, prompt management, and evaluation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "langfuse",
+        "observability",
+        "tracing",
+        "prompts",
+        "evaluation",
+        "llm-ops",
+        "monitoring"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "obsidian-pack",
+      "source": "./plugins/saas-packs/obsidian-pack",
+      "description": "Complete Obsidian integration skill pack with 24 skills covering vault management, plugins, sync, templates, and knowledge management. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": [
+        "obsidian",
+        "notes",
+        "vault",
+        "plugins",
+        "markdown",
+        "knowledge-management",
+        "pkm"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "documenso-pack",
+      "source": "./plugins/saas-packs/documenso-pack",
+      "description": "Complete Documenso integration skill pack with 24 skills covering document signing, templates, workflows, and e-signature automation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "business-tools",
+      "keywords": [
+        "documenso",
+        "document-signing",
+        "e-signature",
+        "templates",
+        "workflows",
+        "contracts",
+        "open-source"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "evernote-pack",
+      "source": "./plugins/saas-packs/evernote-pack",
+      "description": "Complete Evernote integration skill pack with 24 skills covering note management, notebooks, tags, search, and productivity workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": [
+        "evernote",
+        "notes",
+        "notebooks",
+        "tags",
+        "search",
+        "productivity",
+        "organization"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "guidewire-pack",
+      "source": "./plugins/saas-packs/guidewire-pack",
+      "description": "Complete Guidewire integration skill pack with 24 skills covering InsuranceSuite, PolicyCenter, ClaimCenter, and insurance platform development. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "enterprise",
+      "keywords": [
+        "guidewire",
+        "insurance",
+        "policycenter",
+        "claimcenter",
+        "billingcenter",
+        "insurancesuite",
+        "enterprise"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "lokalise-pack",
+      "source": "./plugins/saas-packs/lokalise-pack",
+      "description": "Complete Lokalise integration skill pack with 24 skills covering translation management, localization workflows, and i18n automation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "devops",
+      "keywords": [
+        "lokalise",
+        "translation",
+        "localization",
+        "i18n",
+        "l10n",
+        "tms",
+        "internationalization"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "maintainx-pack",
+      "source": "./plugins/saas-packs/maintainx-pack",
+      "description": "Complete MaintainX integration skill pack with 24 skills covering work orders, preventive maintenance, asset management, and CMMS workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "enterprise",
+      "keywords": [
+        "maintainx",
+        "cmms",
+        "work-orders",
+        "maintenance",
+        "assets",
+        "facilities",
+        "operations"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "openevidence-pack",
+      "source": "./plugins/saas-packs/openevidence-pack",
+      "description": "Complete OpenEvidence integration skill pack with 24 skills covering medical AI, clinical decision support, evidence-based queries, and healthcare workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "openevidence",
+        "medical-ai",
+        "clinical",
+        "healthcare",
+        "evidence-based",
+        "decision-support",
+        "medicine"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "speak-pack",
+      "source": "./plugins/saas-packs/speak-pack",
+      "description": "Complete Speak integration skill pack with 24 skills covering AI language learning, speech recognition, conversation practice, and education technology. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "speak",
+        "language-learning",
+        "speech",
+        "ai-tutor",
+        "education",
+        "conversation",
+        "edtech"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
+      "name": "twinmind-pack",
+      "source": "./plugins/saas-packs/twinmind-pack",
+      "description": "Complete TwinMind integration skill pack with 24 skills covering AI meeting assistant, transcription, summaries, and productivity automation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": [
+        "twinmind",
+        "meetings",
+        "transcription",
+        "summaries",
+        "ai-assistant",
+        "productivity",
+        "automation"
+      ],
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      }
+    },
+    {
       "name": "gastown",
       "source": "./plugins/community/gastown",
       "description": "Multi-agent orchestrator for Claude Code. Track work with convoys, sling to polecats. The Cognition Engine for AI-powered software factories.",

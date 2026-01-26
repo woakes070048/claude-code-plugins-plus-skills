@@ -1,22 +1,22 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-01-22T06:08:32.942Z",
+    "generated": "2026-01-26T17:05:14.245Z",
     "source": "marketplace.extended.json",
     "generator": "scripts/sync-catalog.mjs"
   },
   "stats": {
-    "totalPlugins": 283,
-    "totalSkills": 349,
+    "totalPlugins": 295,
+    "totalSkills": 637,
     "totalCommands": 59,
-    "pluginsWithSkills": 43,
+    "pluginsWithSkills": 55,
     "byCategory": {
-      "productivity": 17,
+      "productivity": 20,
       "security": 28,
       "testing": 25,
-      "ai-ml": 41,
+      "ai-ml": 45,
       "performance": 25,
-      "devops": 35,
+      "devops": 36,
       "api-development": 25,
       "crypto": 26,
       "skill-enhancers": 6,
@@ -25,22 +25,24 @@
       "database": 28,
       "design": 1,
       "ai-agency": 6,
-      "business-tools": 5,
+      "business-tools": 6,
       "fullstack": 1,
       "example": 3,
       "finance": 1,
       "code-quality": 1,
       "automation": 2,
       "community": 4,
-      "development": 1
+      "development": 1,
+      "data-engineering": 1,
+      "enterprise": 2
     },
     "byStatus": {
-      "active": 264,
+      "active": 276,
       "maintained": 19
     },
     "featured": 2,
-    "new": 262,
-    "generatedAt": "2026-01-22T06:08:32.942Z"
+    "new": 274,
+    "generatedAt": "2026-01-26T17:05:14.245Z"
   },
   "plugins": [
     {
@@ -9567,6 +9569,439 @@
       "author": {
         "name": "Rowan Brooks",
         "email": "rowanbrooks100@github.com"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "databricks-pack",
+      "name": "databricks-pack",
+      "displayName": "databricks pack",
+      "description": "Complete Databricks integration skill pack with 24 skills covering Delta Lake, MLflow, notebooks, clusters, and data engineering workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "data-engineering",
+      "keywords": [
+        "databricks",
+        "delta-lake",
+        "mlflow",
+        "spark",
+        "notebooks",
+        "clusters",
+        "data-engineering",
+        "lakehouse"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install databricks-pack",
+      "sourcePath": "./plugins/saas-packs/databricks-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "documenso-pack",
+      "name": "documenso-pack",
+      "displayName": "documenso pack",
+      "description": "Complete Documenso integration skill pack with 24 skills covering document signing, templates, workflows, and e-signature automation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "business-tools",
+      "keywords": [
+        "documenso",
+        "document-signing",
+        "e-signature",
+        "templates",
+        "workflows",
+        "contracts",
+        "open-source"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install documenso-pack",
+      "sourcePath": "./plugins/saas-packs/documenso-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "evernote-pack",
+      "name": "evernote-pack",
+      "displayName": "evernote pack",
+      "description": "Complete Evernote integration skill pack with 24 skills covering note management, notebooks, tags, search, and productivity workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": [
+        "evernote",
+        "notes",
+        "notebooks",
+        "tags",
+        "search",
+        "productivity",
+        "organization"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install evernote-pack",
+      "sourcePath": "./plugins/saas-packs/evernote-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "guidewire-pack",
+      "name": "guidewire-pack",
+      "displayName": "guidewire pack",
+      "description": "Complete Guidewire integration skill pack with 24 skills covering InsuranceSuite, PolicyCenter, ClaimCenter, and insurance platform development. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "enterprise",
+      "keywords": [
+        "guidewire",
+        "insurance",
+        "policycenter",
+        "claimcenter",
+        "billingcenter",
+        "insurancesuite",
+        "enterprise"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install guidewire-pack",
+      "sourcePath": "./plugins/saas-packs/guidewire-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "langfuse-pack",
+      "name": "langfuse-pack",
+      "displayName": "langfuse pack",
+      "description": "Complete Langfuse integration skill pack with 24 skills covering LLM observability, tracing, prompt management, and evaluation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "langfuse",
+        "observability",
+        "tracing",
+        "prompts",
+        "evaluation",
+        "llm-ops",
+        "monitoring"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install langfuse-pack",
+      "sourcePath": "./plugins/saas-packs/langfuse-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "lokalise-pack",
+      "name": "lokalise-pack",
+      "displayName": "lokalise pack",
+      "description": "Complete Lokalise integration skill pack with 24 skills covering translation management, localization workflows, and i18n automation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "devops",
+      "keywords": [
+        "lokalise",
+        "translation",
+        "localization",
+        "i18n",
+        "l10n",
+        "tms",
+        "internationalization"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install lokalise-pack",
+      "sourcePath": "./plugins/saas-packs/lokalise-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "maintainx-pack",
+      "name": "maintainx-pack",
+      "displayName": "maintainx pack",
+      "description": "Complete MaintainX integration skill pack with 24 skills covering work orders, preventive maintenance, asset management, and CMMS workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "enterprise",
+      "keywords": [
+        "maintainx",
+        "cmms",
+        "work-orders",
+        "maintenance",
+        "assets",
+        "facilities",
+        "operations"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install maintainx-pack",
+      "sourcePath": "./plugins/saas-packs/maintainx-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "mistral-pack",
+      "name": "mistral-pack",
+      "displayName": "mistral pack",
+      "description": "Complete Mistral AI integration skill pack with 24 skills covering model inference, embeddings, fine-tuning, and production deployments. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "mistral",
+        "llm",
+        "inference",
+        "embeddings",
+        "fine-tuning",
+        "ai",
+        "machine-learning"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install mistral-pack",
+      "sourcePath": "./plugins/saas-packs/mistral-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "obsidian-pack",
+      "name": "obsidian-pack",
+      "displayName": "obsidian pack",
+      "description": "Complete Obsidian integration skill pack with 24 skills covering vault management, plugins, sync, templates, and knowledge management. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": [
+        "obsidian",
+        "notes",
+        "vault",
+        "plugins",
+        "markdown",
+        "knowledge-management",
+        "pkm"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install obsidian-pack",
+      "sourcePath": "./plugins/saas-packs/obsidian-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "openevidence-pack",
+      "name": "openevidence-pack",
+      "displayName": "openevidence pack",
+      "description": "Complete OpenEvidence integration skill pack with 24 skills covering medical AI, clinical decision support, evidence-based queries, and healthcare workflows. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "openevidence",
+        "medical-ai",
+        "clinical",
+        "healthcare",
+        "evidence-based",
+        "decision-support",
+        "medicine"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install openevidence-pack",
+      "sourcePath": "./plugins/saas-packs/openevidence-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "speak-pack",
+      "name": "speak-pack",
+      "displayName": "speak pack",
+      "description": "Complete Speak integration skill pack with 24 skills covering AI language learning, speech recognition, conversation practice, and education technology. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "ai-ml",
+      "keywords": [
+        "speak",
+        "language-learning",
+        "speech",
+        "ai-tutor",
+        "education",
+        "conversation",
+        "edtech"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install speak-pack",
+      "sourcePath": "./plugins/saas-packs/speak-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "twinmind-pack",
+      "name": "twinmind-pack",
+      "displayName": "twinmind pack",
+      "description": "Complete TwinMind integration skill pack with 24 skills covering AI meeting assistant, transcription, summaries, and productivity automation. Flagship tier vendor pack.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": [
+        "twinmind",
+        "meetings",
+        "transcription",
+        "summaries",
+        "ai-assistant",
+        "productivity",
+        "automation"
+      ],
+      "hasSkills": true,
+      "skillCount": 24,
+      "commandCount": 0,
+      "installCommand": "/plugin install twinmind-pack",
+      "sourcePath": "./plugins/saas-packs/twinmind-pack",
+      "lastUpdatedEpoch": 1769447114,
+      "lastUpdatedDate": "2026-01-26T17:05:14.245Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Jeremy Longshore",
+        "email": "jeremy@intentsolutions.io",
+        "url": "https://github.com/jeremylongshore"
       },
       "type": "instruction-plugin"
     }
