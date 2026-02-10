@@ -26,7 +26,7 @@ class ConnectionResult:
     permissions: List[str] = None
 
 
-def test_postgresql(host: str, port: int, database: str, user: str, password: str = None) -> ConnectionResult:
+def check_postgresql(host: str, port: int, database: str, user: str, password: str = None) -> ConnectionResult:
     """Test PostgreSQL connection and permissions."""
     import os
     env = os.environ.copy()
@@ -83,7 +83,7 @@ def test_postgresql(host: str, port: int, database: str, user: str, password: st
         return ConnectionResult(success=False, message="psql not found - install PostgreSQL client")
 
 
-def test_mysql(host: str, port: int, database: str, user: str, password: str = None) -> ConnectionResult:
+def check_mysql(host: str, port: int, database: str, user: str, password: str = None) -> ConnectionResult:
     """Test MySQL connection and permissions."""
     cmd = ['mysql', '-h', host, '-P', str(port), '-D', database, '-u', user]
     if password:
@@ -126,7 +126,7 @@ def test_mysql(host: str, port: int, database: str, user: str, password: str = N
         return ConnectionResult(success=False, message="mysql not found - install MySQL client")
 
 
-def test_sqlserver(host: str, port: int, database: str, user: str, password: str = None) -> ConnectionResult:
+def check_sqlserver(host: str, port: int, database: str, user: str, password: str = None) -> ConnectionResult:
     """Test SQL Server connection and permissions."""
     cmd = [
         'sqlcmd',
@@ -206,9 +206,9 @@ def main():
     print()
 
     testers = {
-        'postgresql': test_postgresql,
-        'mysql': test_mysql,
-        'sqlserver': test_sqlserver,
+        'postgresql': check_postgresql,
+        'mysql': check_mysql,
+        'sqlserver': check_sqlserver,
     }
 
     result = testers[args.db_type](args.host, port, args.database, args.user, args.password)
