@@ -433,7 +433,7 @@ def score_spec_compliance(path: Path, body: str, fm: dict) -> dict:
     opt_notes = []
     if 'model' in fm:
         model = fm['model']
-        if model not in ['inherit', 'sonnet', 'haiku'] and not str(model).startswith('claude-'):
+        if model not in ['inherit', 'sonnet', 'haiku', 'opus'] and not str(model).startswith('claude-'):
             opt_score -= 1
             opt_notes.append("invalid model value")
     if not opt_notes:
@@ -1016,9 +1016,9 @@ def validate_frontmatter(path: Path, fm: dict) -> Tuple[List[str], List[str]]:
     # model field
     if 'model' in fm:
         model = fm['model']
-        valid_models = ['inherit', 'sonnet', 'haiku']  # Note: opus deprecated
+        valid_models = ['inherit', 'sonnet', 'haiku', 'opus']
         if model not in valid_models and not str(model).startswith('claude-'):
-            warnings.append(f"[frontmatter] 'model' value '{model}' not standard (use: inherit, sonnet, haiku, or claude-*)")
+            warnings.append(f"[frontmatter] 'model' value '{model}' not standard (use: inherit, sonnet, haiku, opus, or claude-*)")
 
     # disable-model-invocation field
     if 'disable-model-invocation' in fm:

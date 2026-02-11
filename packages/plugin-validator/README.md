@@ -2,7 +2,7 @@
 
 **Validate Claude Code plugins for completeness and best practices before publishing.**
 
-Ensure your plugin meets quality standards with automated checks for required files, JSON validity, 2025 schema compliance, security vulnerabilities, and more.
+Ensure your plugin meets quality standards with automated checks for required files, JSON validity, 2026 schema compliance, security vulnerabilities, and more.
 
 ## Quick Start
 
@@ -26,12 +26,12 @@ claude-plugin-validator ./my-plugin
 - Valid JSON syntax in all config files
 - Required manifest fields (name, version, description, author)
 - Semantic versioning format (x.y.z)
-- Deprecated model identifiers (`opus` → `sonnet`/`haiku`)
+- Valid model identifiers (`sonnet`, `haiku`, `opus`, or `claude-*`)
 
 ### 🧩 Plugin Components
 - At least one component directory (commands, agents, hooks, skills, scripts, mcp)
 - Agent Skills frontmatter validation
-- 2025 schema compliance (`allowed-tools`, `version` fields)
+- 2026 schema compliance (`allowed-tools`, `version` fields)
 - Trigger phrase presence in skill descriptions
 
 ### 🔒 Security Checks
@@ -75,7 +75,7 @@ claude-plugin-validator ./my-plugin
   ✓ .claude-plugin/plugin.json is valid JSON
   ✓ Has 2 component(s): commands, skills
   ✓ Found 1 skill(s)
-  ✓ Skill "my-skill" complies with 2025 schema
+  ✓ Skill "my-skill" complies with 2026 schema
   ✓ Skill "my-skill" has description
   ✓ Script deploy.sh is executable
   ✓ No hardcoded secrets detected
@@ -153,18 +153,18 @@ curl -o LICENSE https://raw.githubusercontent.com/licenses/license-templates/mas
 cat .claude-plugin/plugin.json | jq
 ```
 
-### Deprecated Model Identifier
+### Invalid Model Identifier
 
 ```bash
 ❌ ERRORS (1)
-  ✗ plugin.json contains deprecated "opus" model identifier
+  ✗ plugin.json contains invalid model identifier
 ```
 
-**Fix:** Replace `opus` with `sonnet` or `haiku`:
+**Fix:** Use a valid model ID:
 
 ```json
 {
-  "model": "sonnet"  // for advanced reasoning
+  "model": "sonnet"  // or "haiku", "opus", "claude-*"
 }
 ```
 
@@ -185,7 +185,7 @@ chmod +x scripts/*.sh
 
 ```bash
 ⚠️  WARNINGS (1)
-  ⚠ Skill "my-skill" missing 2025 schema fields (allowed-tools, version)
+  ⚠ Skill "my-skill" missing 2026 schema fields (allowed-tools, version)
 ```
 
 **Fix:** Add frontmatter to SKILL.md:
@@ -216,7 +216,7 @@ console.log(`Warnings: ${validator.warnings.length}`);
 
 ## 2025 Schema Compliance
 
-The validator checks for **Anthropic's 2025 Skills Schema** compliance:
+The validator checks for **Anthropic's 2026 Skills Schema** compliance:
 
 ### Required Fields
 
@@ -274,7 +274,7 @@ Found a bug or want to add checks? Contribute at:
 
 ## License
 
-MIT © 2024-2025 Jeremy Longshore & Contributors
+MIT © 2024-2026 Jeremy Longshore & Contributors
 
 ---
 
