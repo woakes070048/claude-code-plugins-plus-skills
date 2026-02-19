@@ -894,7 +894,7 @@ const totalCategories = searchIndex.stats.categories.length;
            ======================================== */
         .cowork-home-section {
             padding: 4rem 2rem;
-            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #3b82f6 100%);
+            background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-orange-dark) 50%, var(--brand-orange) 100%);
         }
 
         .cowork-home-container {
@@ -939,7 +939,7 @@ const totalCategories = searchIndex.stats.categories.length;
             align-items: center;
             gap: 0.5rem;
             background: white;
-            color: #2563eb;
+            color: var(--brand-orange-dark);
             padding: 0.8rem 2rem;
             border-radius: 10px;
             font-weight: 700;
@@ -1387,67 +1387,6 @@ const totalCategories = searchIndex.stats.categories.length;
         </div>
     </section>
 
-    <!-- Products & Services Section -->
-    <section class="products-section" id="products">
-        <div style="text-align: center;">
-            <div class="section-label">Products & Services</div>
-            <h2 class="section-title" style="margin-left: auto; margin-right: auto;">Level Up Your AI Development</h2>
-        </div>
-
-        <div class="products-grid">
-            <!-- Card 1: AI Agent Wallet -->
-            <div class="product-card">
-                <h3>AI Agent Wallet</h3>
-                <div class="product-price">
-                    <span class="amount">$10</span>
-                    <span class="label">one-time</span>
-                </div>
-                <ul class="product-features">
-                    <li>Docker + FastAPI source code</li>
-                    <li>Multi-chain EVM wallet support</li>
-                    <li>Spending limits & kill switch</li>
-                    <li>Encrypted keys & audit logs</li>
-                    <li>Production deployment guides</li>
-                </ul>
-                <a href="https://jeremylongshore.gumroad.com/l/ai-agent-wallet" class="product-cta" target="_blank" rel="noopener noreferrer">Get AI Agent Wallet</a>
-            </div>
-
-            <!-- Card 2: Crypto Portfolio Agent -->
-            <div class="product-card">
-                <h3>Crypto Portfolio Agent</h3>
-                <div class="product-price">
-                    <span class="amount">$10</span>
-                    <span class="label">one-time</span>
-                </div>
-                <ul class="product-features">
-                    <li>Multi-chain balance tracking</li>
-                    <li>DeFi monitoring (Aave/Compound/Uniswap)</li>
-                    <li>Alerts (Telegram/email/Slack/webhooks)</li>
-                    <li>Liquidation risk warnings</li>
-                    <li>Read-only (no private keys needed)</li>
-                </ul>
-                <a href="https://jeremylongshore.gumroad.com/l/crypto-portfolio-agent" class="product-cta" target="_blank" rel="noopener noreferrer">Get Portfolio Agent</a>
-            </div>
-
-            <!-- Card 3: Claude Code Training -->
-            <div class="product-card service-card">
-                <h3>Claude Code Training</h3>
-                <div class="product-price">
-                    <span class="amount">Custom</span>
-                    <span class="label">per session</span>
-                </div>
-                <ul class="product-features">
-                    <li>Live screen-share with Jeremy</li>
-                    <li>Hands-on plugin dev training</li>
-                    <li>Custom workflow optimization</li>
-                    <li>Production deployment practices</li>
-                    <li>Ongoing support & code reviews</li>
-                </ul>
-                <a href="https://www.upwork.com/services/product/lifestyle-to-learn-claude-code-cli-white-glove-training-to-build-with-ai-2016039265158461099?ref=project_share&tier=1" class="product-cta service-cta" target="_blank" rel="noopener noreferrer">Book Training Session</a>
-            </div>
-        </div>
-    </section>
-
     <!-- SaaS Skill Packs - Featured -->
     <section class="saas-packs-section">
         <div class="saas-packs-container">
@@ -1637,6 +1576,32 @@ const totalCategories = searchIndex.stats.categories.length;
         </div>
     </section>
 
+    <!-- Learn with Jeremy -->
+    <section class="products-section" id="training" style="padding: 4rem 2rem;">
+        <div style="text-align: center;">
+            <div class="section-label">Learn with Jeremy</div>
+            <h2 class="section-title" style="margin-left: auto; margin-right: auto;">Level Up Your Claude Code Skills</h2>
+        </div>
+
+        <div class="products-grid" style="max-width: 600px;">
+            <div class="product-card service-card">
+                <h3>Claude Code Training</h3>
+                <div class="product-price">
+                    <span class="amount">Custom</span>
+                    <span class="label">per session</span>
+                </div>
+                <ul class="product-features">
+                    <li>Live screen-share with Jeremy</li>
+                    <li>Hands-on plugin dev training</li>
+                    <li>Custom workflow optimization</li>
+                    <li>Production deployment practices</li>
+                    <li>Ongoing support & code reviews</li>
+                </ul>
+                <a href="https://www.upwork.com/services/product/lifestyle-to-learn-claude-code-cli-white-glove-training-to-build-with-ai-2016039265158461099?ref=project_share&tier=1" class="product-cta service-cta" target="_blank" rel="noopener noreferrer">Book Training Session</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Quick-Start Collections -->
     <section class="features" style="padding: 4rem 2rem; background: var(--brand-light);">
         <div class="section-label">Quick Start</div>
@@ -1691,6 +1656,48 @@ const totalCategories = searchIndex.stats.categories.length;
                 <div class="feature-icon">🛡️</div>
                 <h3>Open Source</h3>
                 <p>100% open source under MIT license. Inspect, modify, and contribute to any plugin.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products for Sale -->
+    <section class="products-section" id="products">
+        <div style="text-align: center;">
+            <div class="section-label">Products</div>
+            <h2 class="section-title" style="margin-left: auto; margin-right: auto;">Pre-Built AI Agents</h2>
+        </div>
+
+        <div class="products-grid" style="max-width: 800px;">
+            <div class="product-card">
+                <h3>AI Agent Wallet</h3>
+                <div class="product-price">
+                    <span class="amount">$10</span>
+                    <span class="label">one-time</span>
+                </div>
+                <ul class="product-features">
+                    <li>Docker + FastAPI source code</li>
+                    <li>Multi-chain EVM wallet support</li>
+                    <li>Spending limits & kill switch</li>
+                    <li>Encrypted keys & audit logs</li>
+                    <li>Production deployment guides</li>
+                </ul>
+                <a href="https://jeremylongshore.gumroad.com/l/ai-agent-wallet" class="product-cta" target="_blank" rel="noopener noreferrer">Get AI Agent Wallet</a>
+            </div>
+
+            <div class="product-card">
+                <h3>Crypto Portfolio Agent</h3>
+                <div class="product-price">
+                    <span class="amount">$10</span>
+                    <span class="label">one-time</span>
+                </div>
+                <ul class="product-features">
+                    <li>Multi-chain balance tracking</li>
+                    <li>DeFi monitoring (Aave/Compound/Uniswap)</li>
+                    <li>Alerts (Telegram/email/Slack/webhooks)</li>
+                    <li>Liquidation risk warnings</li>
+                    <li>Read-only (no private keys needed)</li>
+                </ul>
+                <a href="https://jeremylongshore.gumroad.com/l/crypto-portfolio-agent" class="product-cta" target="_blank" rel="noopener noreferrer">Get Portfolio Agent</a>
             </div>
         </div>
     </section>
