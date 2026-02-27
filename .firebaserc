@@ -5,6 +5,9 @@
   "targets": {
     "claude-code-plugins-io": {
       "hosting": {
+        "marketplace": [
+          "claude-code-plugins-io"
+        ],
         "cowork-redirect": [
           "claudecoworkskills-io"
         ],
