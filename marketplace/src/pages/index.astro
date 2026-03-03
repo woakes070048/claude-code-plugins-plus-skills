@@ -1755,11 +1755,36 @@ const totalCategories = searchIndex.stats.categories.length;
                     const original = this.textContent;
                     this.textContent = '✓ Copied to clipboard!';
                     this.style.color = 'var(--brand-green)';
+                    if (window.trackEvent) {
+                        window.trackEvent('install_copied', { plugin_name: text, source: 'homepage_install' });
+                    }
                     setTimeout(() => {
                         this.textContent = original;
                         this.style.color = '';
                     }, 2000);
                 });
+            });
+        });
+
+        // Track SaaS pack copy clicks
+        document.querySelectorAll('.saas-cmd').forEach(function(el) {
+            el.addEventListener('click', function() {
+                if (window.trackEvent) {
+                    var packName = this.textContent.replace('/plugin install ', '').replace('npm i ', '').trim();
+                    window.trackEvent('install_copied', { plugin_name: packName, source: 'homepage_saas_pack' });
+                }
+            });
+        });
+
+        // Track CTA clicks
+        document.querySelectorAll('.hero-cta-group a, .cowork-home-cta a, .saas-cta a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.trackEvent) {
+                    window.trackEvent('cta_click', {
+                        cta_name: this.textContent.trim().substring(0, 50),
+                        cta_url: this.getAttribute('href')
+                    });
+                }
             });
         });
 

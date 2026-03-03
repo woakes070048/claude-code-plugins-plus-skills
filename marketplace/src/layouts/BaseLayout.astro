@@ -73,6 +73,9 @@ const { title, description = "Browse 244 searchable agent skills and 259 plugins
       }
     </script>
 
+    <!-- Unified Analytics Helper -->
+    <script is:inline src="/scripts/analytics.js"></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -490,10 +493,10 @@ const { title, description = "Browse 244 searchable agent skills and 259 plugins
     <!-- Mobile Menu Script -->
     <script is:inline>
         document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.mobile-menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            const menuIcon = document.querySelector('.menu-icon');
-            const closeIcon = document.querySelector('.close-icon');
+            var menuToggle = document.querySelector('.mobile-menu-toggle');
+            var navLinks = document.querySelector('.nav-links');
+            var menuIcon = document.querySelector('.menu-icon');
+            var closeIcon = document.querySelector('.close-icon');
 
             if (menuToggle && navLinks) {
                 menuToggle.addEventListener('click', function() {
@@ -531,6 +534,18 @@ const { title, description = "Browse 244 searchable agent skills and 259 plugins
                     }
                 });
             }
+
+            // Track outbound link clicks (nav + footer)
+            document.querySelectorAll('nav a[target="_blank"], footer a[target="_blank"], .top-banner a[target="_blank"]').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (window.trackEvent) {
+                        window.trackEvent('outbound_click', {
+                            url: link.href,
+                            link_text: link.textContent.trim()
+                        });
+                    }
+                });
+            });
         });
     </script>
 </body>
