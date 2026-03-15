@@ -32,6 +32,29 @@ def find_project_root() -> Path:
     return current
 
 
+def _build_match_patterns(clean_name: str, skill_name: str, skill_path: str | None) -> list[str]:
+    """Build the set of strings that indicate the skill was triggered.
+
+    Matches against:
+    - The temp command file name (for skills not yet installed)
+    - The real skill name (for already-installed plugin skills)
+    - The real SKILL.md path (for Read-based triggering of installed skills)
+    """
+    patterns = [clean_name, skill_name]
+    if skill_path:
+        # Match the SKILL.md path for Read tool calls to the real skill
+        real_skill_md = str(Path(skill_path) / "SKILL.md")
+        patterns.append(real_skill_md)
+        # Also match the skill directory path itself
+        patterns.append(str(Path(skill_path)))
+    return patterns
+
+
+def _matches_skill(text: str, patterns: list[str]) -> bool:
+    """Check if any of the skill match patterns appear in text."""
+    return any(p in text for p in patterns)
+
+
 def run_single_query(
     query: str,
     skill_name: str,
@@ -39,6 +62,7 @@ def run_single_query(
     timeout: int,
     project_root: str,
     model: str | None = None,
+    skill_path: str | None = None,
 ) -> bool:
     """Run a single query and return whether the skill was triggered.
 
@@ -47,11 +71,19 @@ def run_single_query(
     Uses --include-partial-messages to detect triggering early from
     stream events (content_block_start) rather than waiting for the
     full assistant message, which only arrives after tool execution.
+
+    When the skill is already installed as a plugin, Claude may invoke
+    the real plugin skill instead of the temp command. The detection
+    logic matches against both the temp command name AND the real skill
+    name/path, so results are accurate either way.
     """
     unique_id = uuid.uuid4().hex[:8]
     clean_name = f"{skill_name}-skill-{unique_id}"
     project_commands_dir = Path(project_root) / ".claude" / "commands"
     command_file = project_commands_dir / f"{clean_name}.md"
+
+    # Build match patterns for both temp command and real installed skill
+    patterns = _build_match_patterns(clean_name, skill_name, skill_path)
 
     try:
         project_commands_dir.mkdir(parents=True, exist_ok=True)
@@ -144,12 +176,12 @@ def run_single_query(
                             delta = se.get("delta", {})
                             if delta.get("type") == "input_json_delta":
                                 accumulated_json += delta.get("partial_json", "")
-                                if clean_name in accumulated_json:
+                                if _matches_skill(accumulated_json, patterns):
                                     return True
 
                         elif se_type in ("content_block_stop", "message_stop"):
                             if pending_tool_name:
-                                return clean_name in accumulated_json
+                                return _matches_skill(accumulated_json, patterns)
                             if se_type == "message_stop":
                                 return False
 
@@ -161,9 +193,8 @@ def run_single_query(
                                 continue
                             tool_name = content_item.get("name", "")
                             tool_input = content_item.get("input", {})
-                            if tool_name == "Skill" and clean_name in tool_input.get("skill", ""):
-                                triggered = True
-                            elif tool_name == "Read" and clean_name in tool_input.get("file_path", ""):
+                            input_str = json.dumps(tool_input)
+                            if tool_name in ("Skill", "Read") and _matches_skill(input_str, patterns):
                                 triggered = True
                             return triggered
 
@@ -191,6 +222,7 @@ def run_eval(
     runs_per_query: int = 1,
     trigger_threshold: float = 0.5,
     model: str | None = None,
+    skill_path: Path | None = None,
 ) -> dict:
     """Run the full eval set and return results."""
     results = []
@@ -207,6 +239,7 @@ def run_eval(
                     timeout,
                     str(project_root),
                     model,
+                    str(skill_path) if skill_path else None,
                 )
                 future_to_info[future] = (item, run_idx)
 
@@ -293,6 +326,7 @@ def main():
         runs_per_query=args.runs_per_query,
         trigger_threshold=args.trigger_threshold,
         model=args.model,
+        skill_path=skill_path,
     )
 
     if args.verbose:

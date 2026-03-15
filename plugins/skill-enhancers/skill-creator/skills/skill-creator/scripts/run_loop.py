@@ -17,7 +17,7 @@ from pathlib import Path
 
 from scripts.generate_report import generate_html
 from scripts.improve_description import improve_description
-from scripts.run_eval import find_project_root, run_eval
+from scripts.run_eval import find_project_root, run_eval  # noqa: F401 (find_project_root re-exported)
 from scripts.utils import parse_skill_md
 
 
@@ -96,6 +96,7 @@ def run_loop(
             runs_per_query=runs_per_query,
             trigger_threshold=trigger_threshold,
             model=model,
+            skill_path=skill_path,
         )
         eval_elapsed = time.time() - t0
 
